@@ -8,7 +8,7 @@ public class Task3 {
         String data = scr.nextLine();
         double res = 0;       
         if (data.contains("+")){
-            String[] arr = data.replace("+", " ").split(" ");
+            String[] arr = data.split("\\+");
             res = Integer.parseInt(arr[0]) + Integer.parseInt(arr[1]);            
         }
         else if (data.contains("-")){
@@ -20,7 +20,7 @@ public class Task3 {
             res =Double.parseDouble(arr[0]) / Integer.parseInt(arr[1]);           
         }
         else if (data.contains("*")){
-            String[] arr = data.replace("*", " ").split(" ");
+            String[] arr = data.split("\\*");
             res = Integer.parseInt(arr[0]) * Integer.parseInt(arr[1]);            
         }
         String r = Double.toString(res);
